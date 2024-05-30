@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sopa de letras</title>
+    <link rel="stylesheet" href="../styles/styleJuego.css">
+</head>
+<body>
+    <div class="contenedor">
+        <div class="titulo">
+            <h1>Instrucciones juego</h1>
+        </div>
+        <div class="instrucciones">
+            <p>¡Querido/a usuario/a, bienvenido/a a nuestro juego de Sopa de Letras! <br>
+
+                Este juego se creó con el propósito de brindarles una actividad recreativa, ya que ocupar la mente en actividades nutritivas para el cerebro como esta puede mejorar considerablemente su estado de salud. Recuerden que la psique influye mucho en la salud.
+                
+                Otra razón es la demora en la atención en nuestro servicio. Es muy difícil poder precisar el tiempo estimado para cada uno de ustedes. Agradecemos que soliciten a alguno de nuestro personal una hoja de sopa de letras o que la jueguen desde sus dispositivos móviles.<br>
+                
+                Gracias por su atención, ¡y deseamos que se mejoren pronto!
+            </p>
+        </div>
+        <div class="juego">
+            <div class="sopaDeLetrasContainer">
+                <div class="sopaDeLetras">
+                    <table id="tablaSopa">
+                        <!-- Aquí va la tabla de la sopa de letras -->
+                    </table>
+                </div>
+            </div>
+            <div class="palabras">
+                <h2>Lista:</h2>
+                <ul id="listaPalabras">
+                    <!-- Aquí van las palabras de la sopa de letras -->
+                </ul>
+            </div>
+        </div>        
+        <div class="tiempo">
+            <span id="cronometro">00:00</span>
+        </div>        
+        <div class="botones">
+            <div class="boton" id="glosario">
+                <a href="glosario.html">Glosario</a>
+            </div>
+            <div class="boton" id="imprimir">
+                <button onclick="imprimir()">Imprimir</button>
+            </div>      
+        </div>
+    </div>
+    <script src="../scripts/logica.js"></script>
+</body>
+</html>

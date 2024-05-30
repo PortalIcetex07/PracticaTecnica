@@ -1,0 +1,217 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.contenedor {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.titulo h1 {
+    color: #333;
+}
+
+.instrucciones {
+    margin-bottom: 20px;
+}
+
+.juego {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start; 
+}
+
+.sopaDeLetras, .palabras, .tiempo {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 10px;
+    box-sizing: border-box;
+    text-align: left;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sopaDeLetras {
+    max-width: 60%; 
+}
+
+.palabras {
+    flex: 1; 
+    background-color: #f9f9f9;
+    padding: 10px; 
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 200px; 
+    overflow: auto;
+}
+
+@media (max-width: 768px) {
+    .juego {
+        flex-direction: column; 
+    }
+
+    .sopaDeLetrasContainer, .palabras {
+        width: 100%;
+        max-width: none; 
+    }
+
+    .sopaDeLetrasContainer {
+        order: 1; 
+    }
+
+    .palabras {
+        font-size: 10px; 
+        padding: 5px; 
+    }
+}
+
+#tablaSopa {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+#tablaSopa td {
+    width: calc(100% / 15); 
+    height: calc(100% / 15);
+    border: 1px solid #ccc;
+    text-align: center;
+    vertical-align: middle;
+    font-size: calc(1vw + 1vh);
+    font-weight: bold;
+    padding: 5px;
+}
+
+/* Estilo para letra incorrecta */
+.letra-incorrecta {
+    color: red;
+}
+
+/* Estilo para letra correcta */
+.letra-correcta {
+    color: green;
+}
+
+/* Estilo para letra seleccionada */
+.letra-seleccionada {
+    background-color: yellow;
+}
+
+.palabras h2 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.palabras ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.palabras li {
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.palabras li:hover {
+    background-color: #e0e0e0;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    margin-top: 20px;
+}
+
+.boton {
+    margin-right: 10px;
+}
+
+.boton a {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block; 
+    vertical-align: middle; 
+}
+
+.boton a:hover {
+    background-color: #0056b3;
+}
+
+#imprimir button {
+    background-color: #007bff; 
+    color: #fff; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    cursor: pointer; 
+}
+
+#imprimir button:hover {
+    background-color: #0056b3; 
+}
+
+.sopaDeLetrasContainer {
+    flex: 1; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin-right: 20px; 
+}
+
+.sopaDeLetras {
+    max-width: 100%; 
+    overflow: auto; 
+}
+
+.tiempo {
+    margin: 20px 0; 
+    text-align: center; 
+}
+
+#cronometro {
+    font-size: 24px; 
+}
+
+@media print {
+    /* Estilos para centrar la tabla de la sopa de letras en la versión impresa */
+    .sopaDeLetras {
+        margin: 0 auto; /* Centrar la tabla horizontalmente */
+        width: 100%; /* Ocupar todo el ancho disponible */
+        max-width: none; /* No establecer un ancho máximo */
+    }
+
+    /* Estilos para las celdas de la sopa de letras */
+    #tablaSopa td {
+        width: calc(100% / 15); /* Ancho de las celdas calculado automáticamente */
+        height: calc(100% / 15); /* Altura de las celdas calculada automáticamente */
+        border: 1px solid #ccc;
+        text-align: center;
+        vertical-align: middle;
+        font-size: calc(1vw + 1vh);
+        font-weight: bold;
+        padding: 5px;
+    }
+}
+
+
