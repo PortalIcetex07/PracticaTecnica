@@ -92,17 +92,14 @@ body {
     padding: 5px;
 }
 
-/* Estilo para letra incorrecta */
 .letra-incorrecta {
     color: red;
 }
 
-/* Estilo para letra correcta */
 .letra-correcta {
-    color: green;
+    background-color: lightgreen;
 }
 
-/* Estilo para letra seleccionada */
 .letra-seleccionada {
     background-color: yellow;
 }

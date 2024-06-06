@@ -1,6 +1,31 @@
 // Variables globales
 let palabrasTotales = 0;
 let coordenadasPalabras = {};
+let tiempo = 0;
+let intervalo;
+let letrasCorrectas = 0;
+
+// Función para actualizar el reloj
+function actualizarReloj() {
+    const minutos = Math.floor(tiempo / 60);
+    const segundos = tiempo % 60;
+    const reloj = document.getElementById("cronometro");
+    reloj.textContent = `${minutos.toString().padStart(2, '0')}:${segundos.toString().padStart(2, '0')}`;
+}
+
+// Función para iniciar el reloj
+function iniciarReloj() {
+    tiempo = 0;
+    intervalo = setInterval(() => {
+        tiempo++;
+        actualizarReloj();
+    }, 1000);
+}
+
+// Función para detener el reloj
+function detenerReloj() {
+    clearInterval(intervalo);
+}
 
 // Función para generar la sopa de letras
 function generarSopaDeLetras(dimensiones) {
@@ -136,6 +161,9 @@ function iniciarJuego() {
     letras.forEach(letra => {
         letra.addEventListener("click", seleccionarLetra);
     });
+
+    iniciarReloj();
+
 }
 
 // Función para manejar la selección de letras
@@ -144,22 +172,23 @@ function seleccionarLetra(event) {
     const columna = parseInt(event.target.dataset.columna);
     const coordenada = `${fila},${columna}`;
 
-    let esPalabra = false;
+    let letraEncontrada = false;
 
     Object.entries(coordenadasPalabras).forEach(([palabra, coordenadas]) => {
         if (coordenadas.includes(coordenada)) {
-            esPalabra = true;
+            letraEncontrada = true;
+            letrasCorrectas++;
         }
     });
 
-    if (esPalabra) {
+    if (letraEncontrada) {
         event.target.classList.add('letra-correcta');
         event.target.classList.remove('letra-incorrecta');
     } else {
         event.target.classList.add('letra-incorrecta');
         setTimeout(() => {
             event.target.classList.remove('letra-incorrecta');
-        }, 500);
+        }, 500);a
     }
 
     event.target.classList.add('letra-seleccionada');
@@ -167,7 +196,18 @@ function seleccionarLetra(event) {
     setTimeout(() => {
         event.target.classList.remove('letra-seleccionada');
     }, 500);
+
+    let letrasCorrectasTotales = 0;
+    Object.keys(coordenadasPalabras).forEach(palabra => {
+        letrasCorrectasTotales += coordenadasPalabras[palabra].length;
+    });
+
+    if (letrasCorrectas === letrasCorrectasTotales) {
+        detenerReloj();
+        alert("¡Felicidades! Has encontrado todas las palabras.");
+    }
 }
+
 
 // Iniciar el juego al cargar la página
 window.addEventListener("load", iniciarJuego);
