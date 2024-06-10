@@ -14,7 +14,7 @@
     .celda {
         width: calc(100% / 9); /* Ancho relativo a las filas del tablero */
         height: calc(100% / 9); /* Alto relativo a las filas del tablero */
-        font-size: 4vw; /* Tamaño de fuente relativo */
+        font-size: 3.5vw; /* Tamaño de fuente relativo */
     }
 
     #digitos {
@@ -26,7 +26,7 @@
     .numero {
         width: calc(100% / 9); /* Ancho relativo a las filas del tablero */
         height: calc(100% / 9); /* Alto relativo a las filas del tablero */
-        font-size: 5vw; /* Tamaño de fuente relativo */
+        font-size: 3vw; /* Tamaño de fuente relativo */
     }
 
     .instrucciones {
@@ -36,6 +36,7 @@
         padding: 10px;
     }
 }
+
 
 /* Estilos generales */
 body {
