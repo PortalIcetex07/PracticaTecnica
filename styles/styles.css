@@ -16,33 +16,69 @@ body {
     color: #333;
 }
 
+.instrucciones p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.formulario {
+    margin-bottom: 20px;
+}
+
+.formulario input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
 .boton {
     margin-top: 20px;
     text-align: center;
-    display: inline-block; 
+    display: inline-block;
 }
 
-.boton a {
+.boton a, .botones button {
     display: inline-block;
     padding: 15px 30px;
     font-size: 18px;
     background-color: #007bff;
     color: #fff;
-    border: 2px solid transparent; 
+    border: 2px solid transparent;
     cursor: pointer;
-    text-decoration: none; 
-    margin-right: 10px; 
+    text-decoration: none;
+    margin-right: 10px;
+    border-radius: 4px;
 }
 
-.boton a:last-child {
-    margin-right: 0; 
+.boton a:last-child, .botones a {
+    margin-right: 0;
 }
 
-.boton a:hover {
+.boton a:hover, .botones button:hover, .botones a:hover {
     background-color: #0056b3;
-    border-color: #0056b3; 
+    border-color: #0056b3;
 }
 
+.botones a {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #6c757d;
+    color: #fff;
+    border: 2px solid transparent;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.botones a:hover {
+    background-color: #5a6268;
+    border-color: #5a6268;
+}
 
 .imagen img {
     max-width: 100%;
@@ -51,3 +87,48 @@ body {
     height: auto; 
 }
 
+/* Estilos específicos para la página de registro */
+.registro .instrucciones p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.registro .formulario {
+    margin-bottom: 20px;
+}
+
+.registro .formulario input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.registro .botones button, .registro .botones a {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: #fff;
+    border: 2px solid transparent;
+    cursor: pointer;
+    text-decoration: none;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+.registro .botones a {
+    background-color: #6c757d;
+    color: #fff;
+    border: 2px solid transparent;
+    border-radius: 4px;
+}
+
+.registro .botones a:hover {
+    background-color: #5a6268;
+    border-color: #5a6268;
+}

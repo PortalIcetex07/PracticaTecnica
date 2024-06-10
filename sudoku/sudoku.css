@@ -1,0 +1,189 @@
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+    #tablero {
+        width: 90%;
+        height: auto;
+        max-width: 450px;
+        max-height: 450px;
+        margin: 0 auto;
+    }
+
+    .celda {
+        width: 8vw;
+        height: 8vw;
+        font-size: 4vw;
+    }
+
+    #digitos {
+        width: 90%;
+        height: auto;
+        max-width: 450px;
+        margin: 10px auto;
+    }
+
+    .numero {
+        width: 10vw;
+        height: 10vw;
+        font-size: 5vw;
+    }
+
+    .instrucciones {
+        width: 90%;
+        padding: 10px;
+    }
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 20px;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.titulo {
+    text-align: center;
+}
+
+.instrucciones {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+h2#errores {
+    color: coral;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.juego {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+#tablero {
+    width: 450px;
+    height: 450px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    border: 3px solid #333;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.celda {
+    width: 48px;
+    height: 48px;
+    border: 1px solid #ddd;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.celda:hover {
+    background-color: #f1f1f1;
+}
+
+.celda-inicial {
+    background-color: #f9f9f9;
+    cursor: default;
+}
+
+.linea-horizontal {
+    border-bottom: 2px solid #333;
+}
+
+.linea-vertical {
+    border-right: 2px solid #333;
+}
+
+#digitos {
+    width: 450px;
+    height: 50px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.numero {
+    width: 44px;
+    height: 44px;
+    border: 1px solid #333;
+    margin: 2px;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.numero:hover {
+    background-color: #ddd;
+}
+
+.numero-seleccionado {
+    background-color: gray;
+    color: #fff;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    margin-top: 20px;
+}
+
+.boton {
+    margin-right: 10px;
+}
+
+.boton a {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block; 
+    vertical-align: middle; 
+}
+
+.boton button:hover, .boton a:hover {
+    background-color: #0056b3;
+}
+
+#imprimir button {
+    background-color: #007bff; 
+    color: #fff; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    cursor: pointer; 
+}

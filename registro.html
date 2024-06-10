@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hospital</title>
+    <title>Registro</title>
     <link rel="stylesheet" href="styles/styles.css">
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
@@ -22,23 +22,27 @@
         const db = firebase.firestore();
     </script>
 </head>
-<body>
+<body class="registro">
     <div class="general">
         <div class="titulo">
-            <h1>Pagina Interactiva HORO</h1>
-            <p>Si te gustaría registrar tu score crea un usuario: <a href="registro.html">Registro</a></p>
-            <p>Si ya tienes un registro inicia sesión:</p>
-            <form id="login-form">
-                <input type="number" id="user-id" placeholder="Número de usuario" required>
-                <input type="submit" value="Iniciar sesión">
+            <h1>Registro</h1>
+        </div>
+        <div class="instrucciones">
+            <p>Querido Usuario, si desea registrar sus mejores tiempos y competir su score con otros usuarios, por favor diligencie este formulario.
+                Igualmente no es obligatorio que llene el formulario, puede jugar sin hacerlo, solo que no se guardará su score.
+                Su usuario va a ser su número de identificación, y ponga cualquier nombre que desee.
+            </p>
+        </div>
+        <div class="formulario">
+            <form id="register-form">
+                <input type="number" id="register-user-id" placeholder="Digita tu número de identificación" required>
+                <input type="text" id="register-username" placeholder="Digita cualquier nombre que desees" required>
+                <button type="submit">Registrar</button>
             </form>
         </div>
-        <div class="imagen">
-            <img src="recursos/hospital.png" alt="Sopa de Letras">
-        </div>
-        <div class="boton" id="jugar">
-            <a href="html/pagina-juego.html">Sopa De Letras</a>
-            <a href="sudoku/sudoku.html">Sudoku</a>
+        <div class="mensaje" id="registro-mensaje"></div>
+        <div class="botones">
+            <a href="index.html">Volver</a>
         </div>
     </div>
 </body>

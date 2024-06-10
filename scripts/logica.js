@@ -148,9 +148,9 @@ function mostrarPalabras(palabras) {
 }
 
 // Función para iniciar el juego
-function iniciarJuego() {
+async function iniciarJuego() {
     const dimensiones = 15;
-    const palabras = generarPalabrasMedicina();
+    const palabras = await generarPalabrasMedicina();
     const sopa = generarSopaDeLetras(dimensiones);
     colocarPalabras(sopa, palabras);
     rellenarSopa(sopa);
@@ -232,25 +232,14 @@ function imprimir() {
 }
 
 // Función para generar palabras relacionadas con la medicina
-function generarPalabrasMedicina() {
-    const palabras = [
-        "MEDICINA", "ENFERMERIA", "RADIOLOGIA", "CIRUGIA", "PACIENTE",
-        "HOSPITAL", "EMERGENCIA", "DIAGNOSTICO", "TRATAMIENTO", "TERAPIA",
-        "FARMACIA", "BACTERIA", "VIRUS", "ANATOMIA", "CUIDADO", "SALUD",
-        "RECUPERACION", "CONSULTA", "EQUIPO", "QUIRURGICO", "AMBULANCIA",
-        "URGENCIA", "REHABILITACION", "SINTOMA", "EXAMEN", "PREVENCION",
-        "DETECCION", "INFECCION", "EPIDEMIA", "PANDEMIA", "VACUNA",
-        "IMMUNIZACION", "CUIDADOR", "CONTROL", "OXIGENO", "TERAPEUTA",
-        "RESONANCIA", "RADIOTERAPIA", "ANESTESIA", "QUIROFANO", "CUIDADOSO",
-        "PROFESIONAL", "PULMONAR", "CARDIOLOGIA", "NEUROLOGIA", "GENETICA",
-        "ONCOLOGIA", "GASTROENTEROLOGIA", "DERMATOLOGIA", "PEDIATRIA",
-        "GERIATRIA", "OFTALMOLOGIA", "OTORRINOLARINGOLOGIA", "PSICOLOGIA",
-        "NUTRICION", "FISIOTERAPIA", "SANGRE", "PLASMA", "CUIDADO",
-        "CONVALECENCIA", "REHABILITACION", "TERAPIA", "RESCATE"
-    ];
-    // Filtrar las palabras para que tengan un máximo de 10 caracteres
+async function generarPalabrasMedicina() {
+    const snapshot = await db.collection('palabras').get();
+    const palabras = [];
+    snapshot.forEach(doc => {
+        palabras.push(doc.data().palabra.toUpperCase()); // Convertir la palabra a mayúsculas
+    });
+    
     const palabrasCortas = palabras.filter(palabra => palabra.length <= 10);
-
     const palabrasAleatorias = [];
 
     for (let i = 0; i < 10; i++) {
@@ -261,3 +250,4 @@ function generarPalabrasMedicina() {
 
     return palabrasAleatorias;
 }
+

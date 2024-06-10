@@ -3,13 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sopa de letras</title>
+    <title>Sopa De Letras</title>
     <link rel="stylesheet" href="../styles/styleJuego.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyBHpUuT7cW76NZCpZG8bZjRfnIsAeD6vag",
+            authDomain: "hospital-d45ce.firebaseapp.com",
+            projectId: "hospital-d45ce",
+            storageBucket: "hospital-d45ce.appspot.com",
+            messagingSenderId: "261993671055",
+            appId: "1:261993671055:web:a4b6e08a311476363603fa"
+        };
+
+        const app = firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+    </script>
 </head>
 <body>
     <div class="contenedor">
         <div class="titulo">
-            <h1>Instrucciones juego</h1>
+            <h1>Sopa De Letras</h1>
+            <hr>
         </div>
         <div class="instrucciones">
             <p>¡Querido/a usuario/a, bienvenido/a a nuestro juego de Sopa de Letras! <br>
@@ -41,7 +58,7 @@
         </div>        
         <div class="botones">
             <div class="boton" id="glosario">
-                <a href="glosario.html">Glosario</a>
+                <a href="../index.html">Volver</a>
             </div>
             <div class="boton" id="imprimir">
                 <button onclick="imprimir()">Imprimir</button>
