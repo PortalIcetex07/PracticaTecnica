@@ -1,37 +1,38 @@
 /* Estilos para dispositivos móviles */
 @media only screen and (max-width: 600px) {
     #tablero {
-        width: 90vw; /* Utilizar el ancho de la pantalla */
-        height: 90vw; /* Utilizar el ancho de la pantalla */
-        max-width: 450px; /* Máximo ancho de 450px */
-        max-height: 450px; /* Máximo alto de 450px */
+        width: 80vw; /* Utilizar el 80% del ancho de la pantalla */
+        height: 80vw; /* Utilizar el 80% del ancho de la pantalla */
+        max-width: 400px; /* Máximo ancho de 400px */
+        max-height: 400px; /* Máximo alto de 400px */
         margin: 0 auto;
     }
 
     .celda {
-        width: 10%; /* Ancho relativo */
-        height: 10%; /* Alto relativo */
+        width: calc(100% / 9); /* Ancho relativo a las filas del tablero */
+        height: calc(100% / 9); /* Alto relativo a las filas del tablero */
         font-size: 4vw; /* Tamaño de fuente relativo */
     }
 
     #digitos {
-        width: 90vw; /* Utilizar el ancho de la pantalla */
+        width: 80vw; /* Utilizar el 80% del ancho de la pantalla */
         height: auto;
-        max-width: 450px; /* Máximo ancho de 450px */
+        max-width: 400px; /* Máximo ancho de 400px */
         margin: 10px auto;
     }
 
     .numero {
-        width: 10%; /* Ancho relativo */
-        height: 10%; /* Alto relativo */
+        width: calc(100% / 9); /* Ancho relativo a las filas del tablero */
+        height: calc(100% / 9); /* Alto relativo a las filas del tablero */
         font-size: 5vw; /* Tamaño de fuente relativo */
     }
 
     .instrucciones {
-        width: 90vw; /* Utilizar el ancho de la pantalla */
+        width: 90vw; /* Utilizar el 90% del ancho de la pantalla */
         padding: 10px;
     }
 }
+
 
 /* Estilos generales */
 body {
