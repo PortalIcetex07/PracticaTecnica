@@ -1,11 +1,14 @@
 /* Estilos para dispositivos móviles */
 @media only screen and (max-width: 600px) {
+    .contenedor {
+        padding: 10px; /* Reducir el relleno del contenedor */
+    }
+
     #tablero {
-        width: 80vw; /* Utilizar el 80% del ancho de la pantalla */
-        height: 80vw; /* Utilizar el 80% del ancho de la pantalla */
+        width: 90%; /* Utilizar el 90% del ancho del contenedor */
         max-width: 400px; /* Máximo ancho de 400px */
-        max-height: 400px; /* Máximo alto de 400px */
-        margin: 0 auto;
+        height: auto; /* Altura automática */
+        margin: 0 auto; /* Centrar horizontalmente */
     }
 
     .celda {
@@ -15,10 +18,9 @@
     }
 
     #digitos {
-        width: 80vw; /* Utilizar el 80% del ancho de la pantalla */
-        height: auto;
+        width: 90%; /* Utilizar el 90% del ancho del contenedor */
         max-width: 400px; /* Máximo ancho de 400px */
-        margin: 10px auto;
+        margin: 10px auto; /* Centrar horizontalmente */
     }
 
     .numero {
@@ -28,11 +30,12 @@
     }
 
     .instrucciones {
-        width: 90vw; /* Utilizar el 90% del ancho de la pantalla */
+        width: 90%; /* Utilizar el 90% del ancho del contenedor */
+        max-width: 400px; /* Máximo ancho de 400px */
+        margin: 10px auto; /* Centrar horizontalmente */
         padding: 10px;
     }
 }
-
 
 /* Estilos generales */
 body {
