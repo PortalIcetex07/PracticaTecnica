@@ -1,37 +1,38 @@
 /* Estilos para dispositivos móviles */
 @media only screen and (max-width: 600px) {
     #tablero {
-        width: 90%;
-        height: auto;
-        max-width: 450px;
-        max-height: 450px;
+        width: 90vw; /* Utilizar el ancho de la pantalla */
+        height: 90vw; /* Utilizar el ancho de la pantalla */
+        max-width: 450px; /* Máximo ancho de 450px */
+        max-height: 450px; /* Máximo alto de 450px */
         margin: 0 auto;
     }
 
     .celda {
-        width: 8vw;
-        height: 8vw;
-        font-size: 4vw;
+        width: 10%; /* Ancho relativo */
+        height: 10%; /* Alto relativo */
+        font-size: 4vw; /* Tamaño de fuente relativo */
     }
 
     #digitos {
-        width: 90%;
+        width: 90vw; /* Utilizar el ancho de la pantalla */
         height: auto;
-        max-width: 450px;
+        max-width: 450px; /* Máximo ancho de 450px */
         margin: 10px auto;
     }
 
     .numero {
-        width: 10vw;
-        height: 10vw;
-        font-size: 5vw;
+        width: 10%; /* Ancho relativo */
+        height: 10%; /* Alto relativo */
+        font-size: 5vw; /* Tamaño de fuente relativo */
     }
 
     .instrucciones {
-        width: 90%;
+        width: 90vw; /* Utilizar el ancho de la pantalla */
         padding: 10px;
     }
 }
+
 
 /* Estilos generales */
 body {
