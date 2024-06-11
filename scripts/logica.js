@@ -188,7 +188,7 @@ function seleccionarLetra(event) {
         event.target.classList.add('letra-incorrecta');
         setTimeout(() => {
             event.target.classList.remove('letra-incorrecta');
-        }, 500);a
+        }, 500);
     }
 
     event.target.classList.add('letra-seleccionada');
